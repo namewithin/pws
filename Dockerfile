@@ -10,7 +10,7 @@ RUN apt-get update -y
 RUN apt-get install  -y git python3
 RUN cd /app
 RUN apt-get install curl -y
-RUN curl -fsSL https://deb.nodesource.com/setup_14.x | -E bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install
 RUN npm run lint

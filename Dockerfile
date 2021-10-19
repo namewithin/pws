@@ -9,7 +9,8 @@ COPY . /app
 RUN apt-get update -y
 RUN apt-get install  -y git python3
 RUN cd /app
-RUN apt-get install nodejs -y
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs
 RUN npm install
 RUN npm run lint
 RUN npm run build

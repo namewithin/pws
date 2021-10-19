@@ -12,8 +12,8 @@ RUN cd /app
 RUN apt-get install curl -y
 RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
+RUN cd /app
 RUN npm install
-RUN npm run lint
 RUN npm run build
 
 EXPOSE 6001

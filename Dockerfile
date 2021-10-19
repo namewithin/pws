@@ -8,11 +8,12 @@ COPY . /app
 
 RUN apt-get update -y
 RUN apt-get install  -y git python3
-RUN cd /app
+WORKDIR /app
 RUN apt-get install curl -y
 RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
-RUN cd /app
+WORKDIR /app
+
 RUN npm install
 RUN npm run build
 
